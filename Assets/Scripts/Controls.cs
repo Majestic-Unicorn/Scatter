@@ -9,7 +9,7 @@ public class Controls : MonoBehaviour {
 	void Update () {
 		Vector3 input = new Vector3 (Input.GetAxis ("Horizontal") * speed, 0, Input.GetAxis ("Vertical") * speed);
 
-		GetComponent<Rigidbody> ().AddForce (input);
+		GetComponent<Rigidbody> ().AddForce (input * Time.deltaTime);
 
 		transform.LookAt (input);
 	}

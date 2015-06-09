@@ -6,10 +6,12 @@ public class Follow : MonoBehaviour {
 
 	public Vector3 position;
 
+    public float ease = 0.075f;
+
 	void FixedUpdate () {
 		Vector3 movement = target.position + position;
 
-		movement = Vector3.Lerp (transform.position, movement, 0.075f);
+        movement = Vector3.Lerp(transform.position, movement, ease);
 
 		transform.position = movement;
 
