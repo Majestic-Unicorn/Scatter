@@ -1,1 +1,0 @@
-http://answers.unity3d.com/questions/22604/which-unity-project-files-can-be-ignored-for-versi.html
