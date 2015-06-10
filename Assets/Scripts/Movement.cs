@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Controls : MonoBehaviour {
+public class Movement : MonoBehaviour {
 	//public Transform camera;
 
 	public float speed;
