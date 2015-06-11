@@ -11,6 +11,6 @@ public class Movement : MonoBehaviour {
 
 		GetComponent<Rigidbody> ().AddForce (input * Time.deltaTime);
 
-		transform.LookAt (input);
+     	transform.LookAt (transform.position + input);
 	}
 }
