@@ -2,19 +2,21 @@
 using System.Collections;
 
 public class Follow : MonoBehaviour {
-	public Transform target;
+	public Transform target = null;
 
 	public Vector3 position;
 
     public float ease = 0.075f;
 
 	void FixedUpdate () {
-		Vector3 movement = target.position + position;
+        if (target){
+            Vector3 movement = target.position + position;
 
-        movement = Vector3.Lerp(transform.position, movement, ease);
+            movement = Vector3.Lerp(transform.position, movement, ease);
 
-		transform.position = movement;
+            transform.position = movement;
 
-		transform.LookAt (target);
+            transform.LookAt(target);
+        }
 	}
 }
