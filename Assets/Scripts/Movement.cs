@@ -7,16 +7,22 @@ public class Movement : MonoBehaviour {
 	public float speed;
 
     void Start(){
-        if (GetComponent<NetworkView>())
-            if (!GetComponent<NetworkView>().isMine){
-                enabled = false;
-            }
-            else{
-                Follow camera = GameObject.FindGameObjectWithTag("Camera").GetComponent<Follow>();
+        NetworkView network = GetComponent<NetworkView>();
 
-                camera.transform.position = transform.position;
-                camera.target = transform;
+        if (network)
+            if (!network.isMine){
+                enabled = false;
+                return;
             }
+
+        GameObject obj = GameObject.FindGameObjectWithTag("Camera");
+
+        if (obj){
+            Follow camera = obj.GetComponent<Follow>();
+
+            obj.transform.position = transform.position;
+            camera.target = transform;
+        }
     }
 
 	void Update () {

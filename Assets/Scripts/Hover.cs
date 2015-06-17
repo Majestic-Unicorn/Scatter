@@ -5,7 +5,8 @@ using System.Collections;
 public class Hover : MonoBehaviour {
 	public float hoverHeight = 5;
 	public float hoverForce = 50;
-	
+    public float spin = 0;
+
 	private Rigidbody _rigidBody;
 
 	void Start () {
@@ -22,5 +23,7 @@ public class Hover : MonoBehaviour {
 
 			_rigidBody.AddForce(hover);
 		}
+
+        _rigidBody.AddTorque(new Vector3(0, spin, 0));
 	}
 }

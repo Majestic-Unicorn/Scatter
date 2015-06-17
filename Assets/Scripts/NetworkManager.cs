@@ -5,11 +5,23 @@ public class NetworkManager : MonoBehaviour {
     public string gameName = "ROBOT_FELLA_TEST_GAME";
     public float refreshTime = 3.0f;
 
+    private const string _chars = "0123456789ABCDEF";
+
     HostData[] _hostData;
+
+    private string _randomName(int len){
+        char[] buffer = new char[len];
+
+        for (int i = 0; i < len; i++){
+            buffer[i] = _chars[Random.Range(0, _chars.Length - 1)];
+        }
+
+        return new string(buffer);
+    }
 
     private void StartServer(){
         Network.InitializeServer(32, 25000, false);
-        MasterServer.RegisterHost(gameName, "Robot Fella Test Game", "3rd person multiplayer test.");
+        MasterServer.RegisterHost(gameName, _randomName(64));
     }
 
     IEnumerator refeshHostList(){
