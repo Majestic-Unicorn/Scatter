@@ -2,21 +2,55 @@
 using System.Collections;
 
 public class Follow : MonoBehaviour {
-	public Transform target = null;
+    public Transform[] targets;
 
-	public Vector3 position;
+    public float relativeYaw = 0;
+    public float relativePitch = 25;
+
+    public float height = 100;
 
     public float ease = 0.075f;
 
-	void FixedUpdate () {
-        if (target){
-            Vector3 movement = target.position + position;
+    void Start() {
+        Vector3 average = AverageTarget();
 
-            movement = Vector3.Lerp(transform.position, movement, ease);
+        Vector3 movement = RelativeRotation(average);
 
-            transform.position = movement;
+        transform.position = movement;
 
-            transform.LookAt(target);
+        transform.LookAt(average);
+    }
+
+    Vector3 RelativeRotation(Vector3 axis) {
+        axis = Quaternion.AngleAxis(relativeYaw, Vector3.up) * axis;
+
+        Vector3 direction = new Vector3(0, height, 0);
+
+        direction = Quaternion.Euler(-relativePitch, relativeYaw, 0) * direction;
+
+        return direction + axis;
+    }
+
+    Vector3 AverageTarget() {
+        Vector3 average = new Vector3(0, 0, 0);
+
+        for (int i = 0; i < targets.Length; i++)
+        {
+            average += targets[i].position;
         }
+
+        return average / targets.Length;
+    }
+
+	void FixedUpdate () {
+        Vector3 average = AverageTarget();
+        
+        Vector3 movement = RelativeRotation(average);
+
+        movement = Vector3.Lerp(transform.position, movement, ease);
+
+        transform.position = movement;
+
+        transform.LookAt(average);
 	}
 }

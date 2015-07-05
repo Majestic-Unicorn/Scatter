@@ -18,10 +18,10 @@ public class Movement : MonoBehaviour {
         GameObject obj = GameObject.FindGameObjectWithTag("Camera");
 
         if (obj){
-            Follow camera = obj.GetComponent<Follow>();
+            //Follow camera = obj.GetComponent<Follow>();
 
             obj.transform.position = transform.position;
-            camera.target = transform;
+            //camera.target = transform;
         }
     }
 
