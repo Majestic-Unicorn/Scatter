@@ -1,0 +1,490 @@
+fileFormatVersion: 2
+guid: d17aadc41e0d045419a2a3894eb68da9
+timeCreated: 1436885651
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Chibi
+    100004: Chibi_Head001
+    100006: Chibi_LArmCollarbone
+    100008: Chibi_LArmForearm
+    100010: Chibi_LArmPalm
+    100012: Chibi_LArmUpperarm
+    100014: Chibi_LFoot
+    100016: Chibi_LLegCalf
+    100018: Chibi_LLegPlatform
+    100020: Chibi_LLegThigh
+    100022: Chibi_Neck
+    100024: Chibi_Pelvis
+    100026: Chibi_RCalf
+    100028: Chibi_RCollarbone
+    100030: Chibi_RFoot
+    100032: Chibi_RForearm
+    100034: Chibi_Ribcage
+    100036: Chibi_RPalm
+    100038: Chibi_RPlatform
+    100040: Chibi_RThigh
+    100042: Chibi_RUpperarm
+    100044: Chibi_Skin
+    100046: Chibi_Spine1
+    100048: Chibi_Spine2
+    100050: Chibi_Spine3
+    100052: Chibi_Spine4
+    400000: //RootNode
+    400002: Chibi
+    400004: Chibi_Head001
+    400006: Chibi_LArmCollarbone
+    400008: Chibi_LArmForearm
+    400010: Chibi_LArmPalm
+    400012: Chibi_LArmUpperarm
+    400014: Chibi_LFoot
+    400016: Chibi_LLegCalf
+    400018: Chibi_LLegPlatform
+    400020: Chibi_LLegThigh
+    400022: Chibi_Neck
+    400024: Chibi_Pelvis
+    400026: Chibi_RCalf
+    400028: Chibi_RCollarbone
+    400030: Chibi_RFoot
+    400032: Chibi_RForearm
+    400034: Chibi_Ribcage
+    400036: Chibi_RPalm
+    400038: Chibi_RPlatform
+    400040: Chibi_RThigh
+    400042: Chibi_RUpperarm
+    400044: Chibi_Skin
+    400046: Chibi_Spine1
+    400048: Chibi_Spine2
+    400050: Chibi_Spine3
+    400052: Chibi_Spine4
+    4300000: Chibi_Skin
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Chibi_Skin
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Chibi
+        weight: 0
+      - path: Chibi_LLegPlatform
+        weight: 0
+      - path: Chibi_Pelvis
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_LLegThigh
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_LLegThigh/Chibi_LLegCalf
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_LLegThigh/Chibi_LLegCalf/Chibi_LFoot
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_RThigh
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_RThigh/Chibi_RCalf
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_RThigh/Chibi_RCalf/Chibi_RFoot
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm/Chibi_LArmForearm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm/Chibi_LArmForearm/Chibi_LArmPalm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_Neck
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_Neck/Chibi_Head001
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm/Chibi_RForearm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm/Chibi_RForearm/Chibi_RPalm
+        weight: 1
+      - path: Chibi_RPlatform
+        weight: 0
+      - path: Chibi_Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Chibi_Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LLegThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_RThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LLegCalf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_RCalf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Spine2
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Spine4
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_Head001
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LArmCollarbone
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_RCollarbone
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LArmUpperarm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_RUpperarm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LArmForearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_RForearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LArmPalm
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_RPalm
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_LFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chibi_RFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: char(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: .500000119, y: -.50000006, z: -.499999911, w: .49999997}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_LLegPlatform
+      position: {x: -.253999978, y: 2.09984989e-08, z: -3.83529297e-08}
+      rotation: {x: .500000119, y: -.50000006, z: -.499999911, w: .49999997}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Pelvis
+      position: {x: 7.04349645e-08, y: .923944831, z: -.0270343721}
+      rotation: {x: .5, y: -.5, z: -.5, w: .5}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_LLegThigh
+      position: {x: -.0254776105, y: .0272170193, z: .189881802}
+      rotation: {x: -.0256058928, y: .999033809, z: .0041322452, w: .0354784392}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_LLegCalf
+      position: {x: -.505362093, y: -3.41548912e-06, z: -4.84466568e-07}
+      rotation: {x: .00780803617, y: .00394548057, z: .0543588474, w: .998483121}
+      scale: {x: 1.00000024, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: Chibi_LFoot
+      position: {x: -.447634399, y: 8.98912556e-10, z: 0}
+      rotation: {x: 1.16415308e-10, y: 0, z: -0, w: 1}
+      scale: {x: .999999821, y: 1.00000012, z: .999999881}
+      transformModified: 1
+    - name: Chibi_RThigh
+      position: {x: -.0254770294, y: .0272168946, z: -.189881667}
+      rotation: {x: -.0284467172, y: .999145031, z: .000892455922, w: -.0299874377}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_RCalf
+      position: {x: -.505733848, y: -3.46393585e-06, z: 2.90679935e-07}
+      rotation: {x: .000511426537, y: .00793378055, z: .0607854575, w: .998119235}
+      scale: {x: 1.00000036, y: 1.00000012, z: 1.00000048}
+      transformModified: 1
+    - name: Chibi_RFoot
+      position: {x: -.447635859, y: -1.89244753e-09, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: .999999642, y: .99999994, z: .999999583}
+      transformModified: 1
+    - name: Chibi_Spine1
+      position: {x: -.0672436655, y: -.00514485314, z: 3.39508577e-09}
+      rotation: {x: -2.31717195e-06, y: 1.49709122e-05, z: -.142608911, w: .989779115}
+      scale: {x: 1.0000006, y: 1.0000006, z: 1}
+      transformModified: 1
+    - name: Chibi_Spine2
+      position: {x: -.211068988, y: 0, z: 0}
+      rotation: {x: -1.94173595e-06, y: 1.27458179e-05, z: .1755604, w: .984468699}
+      scale: {x: 1.00000036, y: 1.00000036, z: .99999994}
+      transformModified: 1
+    - name: Chibi_Spine3
+      position: {x: -.179802582, y: -1.21116637e-08, z: 0}
+      rotation: {x: 3.76137365e-07, y: 3.96363339e-06, z: .0868259519, w: .996223509}
+      scale: {x: 1.00000036, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Chibi_Spine4
+      position: {x: -.193220377, y: 2.42233273e-08, z: 0}
+      rotation: {x: -.0280278195, y: .00682624849, z: -.0921338201, w: .995328724}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: Chibi_Ribcage
+      position: {x: -.195278198, y: 0, z: 0}
+      rotation: {x: .0286445636, y: -.00344482413, z: -.0279959738, w: .999191582}
+      scale: {x: .999998689, y: .999998868, z: 1.00000012}
+      transformModified: 1
+    - name: Chibi_LArmCollarbone
+      position: {x: .039508827, y: .0359019153, z: .216063529}
+      rotation: {x: -7.82310963e-08, y: .810328186, z: 3.57627869e-07, w: .585976422}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_LArmUpperarm
+      position: {x: -.102426112, y: 4.76896744e-08, z: -1.93786619e-07}
+      rotation: {x: .0854936391, y: -.19360967, z: .0169382282, w: .977199733}
+      scale: {x: 1.00000048, y: 1, z: .999999404}
+      transformModified: 1
+    - name: Chibi_LArmForearm
+      position: {x: -.331951827, y: 1.21116642e-07, z: 9.68933136e-07}
+      rotation: {x: -.087143667, y: 1.28971885e-06, z: -1.1187538e-07, w: .996195793}
+      scale: {x: 1, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: Chibi_LArmPalm
+      position: {x: -.301961362, y: -1.18467213e-07, z: 1.16271974e-06}
+      rotation: {x: -1.33812428e-05, y: 4.56256157e-06, z: 5.57491262e-08, w: 1}
+      scale: {x: 1, y: .999999762, z: .999999881}
+      transformModified: 1
+    - name: Chibi_Neck
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 5.53700863e-09, y: 9.81046995e-08, z: -5.07812103e-09, w: 1}
+      scale: {x: .99999994, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Chibi_Head001
+      position: {x: -.501529634, y: 0, z: 0}
+      rotation: {x: -8.00427955e-08, y: 8.25184401e-08, z: -9.95616674e-08, w: 1}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Chibi_RCollarbone
+      position: {x: .039508827, y: .0359019265, z: -.216063574}
+      rotation: {x: -1.19209275e-07, y: .810328543, z: 3.72528985e-09, w: -.585975826}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_RUpperarm
+      position: {x: -.090164654, y: 3.40640538e-09, z: 1.93786619e-07}
+      rotation: {x: -5.96046306e-08, y: .19434832, z: 2.84984651e-07, w: .980932534}
+      scale: {x: 1.00000048, y: 1, z: .999999523}
+      transformModified: 1
+    - name: Chibi_RForearm
+      position: {x: -.331951827, y: 2.49803058e-08, z: -1.93786619e-07}
+      rotation: {x: -3.58782336e-06, y: -4.71566494e-07, z: -8.85342306e-05, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_RPalm
+      position: {x: -.301961303, y: 4.8825143e-08, z: -1.93786619e-07}
+      rotation: {x: -1.83585428e-06, y: -3.08382084e-07, z: 8.80734224e-05, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_RPlatform
+      position: {x: .253999978, y: -9.44688949e-09, z: -1.41433043e-08}
+      rotation: {x: .500000119, y: -.50000006, z: -.499999911, w: .49999997}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chibi_Skin
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
