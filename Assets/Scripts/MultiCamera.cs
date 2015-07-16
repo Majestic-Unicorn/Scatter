@@ -3,7 +3,7 @@ using System.Collections;
 
 [RequireComponent(typeof(Camera))]
 public class MultiCamera : MonoBehaviour {
-    public Camera mainCamera;
+    private Camera mainCamera;
     public Transform[] targets;
 
     public float relativeYaw = 0;
@@ -17,8 +17,10 @@ public class MultiCamera : MonoBehaviour {
     public float zoomSpeed = 1f;
     public float ease = 0.075f;
 
+    public float zOffset = 5f;
+
     void Start() {
-        Vector3 average = AverageTarget();
+        Vector3 average = CentreTarget();
 
         Vector3 movement = RelativeRotation(average);
 
@@ -39,11 +41,11 @@ public class MultiCamera : MonoBehaviour {
         return direction + axis;
     }
 
-    private Vector3 AverageTarget() {
+    private Vector3 CentreTarget() {
         Vector3 min = new Vector3(0, 0, 0);
         Vector3 max = new Vector3(0, 0, 0);
 
-        Vector3 average = new Vector3(0, 0, 0);
+       // Vector3 average = new Vector3(0, 0, 0);
 
         for (int i = 0; i < targets.Length; i++){
             if (targets[i].position.x < min.x)
@@ -61,13 +63,17 @@ public class MultiCamera : MonoBehaviour {
             else if (targets[i].position.z > max.z)
                 max.z = targets[i].position.z;
             
-            average += targets[i].position;
+            //average += targets[i].position;
         }
 
-        return (max + min) / 2;
+        Vector3 centre = (max + min) / 2;
+
+        centre.z += zOffset;
+
+        return centre;
     }
 
-    private bool inScreen(Vector3 target, float reduction) {
+    private bool OnScreen(Vector3 target, float reduction) {
         Vector3 screenPos = mainCamera.WorldToScreenPoint(target);
 
         if (screenPos.x < 0 + mainCamera.pixelWidth * reduction)
@@ -90,10 +96,10 @@ public class MultiCamera : MonoBehaviour {
         bool zoomIn = true;
 
         for (int i = 0; i < targets.Length; i++){
-            if (!inScreen(targets[i].position, zoomOutZone))
+            if (!OnScreen(targets[i].position, zoomOutZone))
                 zoomOut = true;
 
-            if (!inScreen(targets[i].position, zoomInZone))
+            if (!OnScreen(targets[i].position, zoomInZone))
                 zoomIn = false;
         }
 
@@ -103,7 +109,7 @@ public class MultiCamera : MonoBehaviour {
         if (zoomIn)
             height -= zoomSpeed;
 
-        Vector3 average = AverageTarget();
+        Vector3 average = CentreTarget();
 
         Vector3 newPos = RelativeRotation(average);    
 
