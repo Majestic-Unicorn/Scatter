@@ -1,27 +1,27 @@
 fileFormatVersion: 2
 guid: 7bec933bfaaa6f94993987e44526a52c
-timeCreated: 1437001562
+timeCreated: 1437099224
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Chibi_LArmCollarbone
-    100002: Chibi_LArmForearm
-    100004: Chibi_LArmPalm
-    100006: Chibi_LArmUpperarm
-    100008: Chibi_Pelvis
-    100010: Chibi_Ribcage
+    100000: Chibi_Pelvis
+    100002: Chibi_RCollarbone
+    100004: Chibi_RForearm
+    100006: Chibi_Ribcage
+    100008: Chibi_RPalm
+    100010: Chibi_RUpperarm
     100012: Chibi_Spine1
     100014: Chibi_Spine2
     100016: Chibi_Spine3
     100018: Chibi_Spine4
     100020: //RootNode
-    400000: Chibi_LArmCollarbone
-    400002: Chibi_LArmForearm
-    400004: Chibi_LArmPalm
-    400006: Chibi_LArmUpperarm
-    400008: Chibi_Pelvis
-    400010: Chibi_Ribcage
+    400000: Chibi_Pelvis
+    400002: Chibi_RCollarbone
+    400004: Chibi_RForearm
+    400006: Chibi_Ribcage
+    400008: Chibi_RPalm
+    400010: Chibi_RUpperarm
     400012: Chibi_Spine1
     400014: Chibi_Spine2
     400016: Chibi_Spine3
@@ -49,7 +49,7 @@ ModelImporter:
       name: RArm
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 35
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -83,13 +83,13 @@ ModelImporter:
         weight: 1
       - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage
         weight: 1
-      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone
         weight: 1
-      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm
         weight: 1
-      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm/Chibi_LArmForearm
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm/Chibi_RForearm
         weight: 1
-      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm/Chibi_LArmForearm/Chibi_LArmPalm
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm/Chibi_RForearm/Chibi_RPalm
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
