@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: bead6da09d90bf14fa9e1ef5cfa115d7
-timeCreated: 1437259276
+timeCreated: 1437276990
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -53,7 +53,8 @@ ModelImporter:
     400042: Chibi_Spine3
     400044: Chibi_Spine4
     400046: //RootNode
-    7400000: Take 001
+    7400000: FallBack
+    7400002: GetUp
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -63,14 +64,162 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    motionNodeName: 
+    motionNodeName: <Root Transform>
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: FallBack
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Chibi
+        weight: 1
+      - path: Chibi_LLegPlatform
+        weight: 1
+      - path: Chibi_Pelvis
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_LLegThigh
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_LLegThigh/Chibi_LLegCalf
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_RThigh
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_RThigh/Chibi_RCalf
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm/Chibi_LArmForearm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm/Chibi_LArmForearm/Chibi_LArmPalm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_Neck
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_Neck/Chibi_Head001
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm/Chibi_RForearm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm/Chibi_RForearm/Chibi_RPalm
+        weight: 1
+      - path: Chibi_RPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: GetUp
+      takeName: Take 001
+      firstFrame: 41
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Chibi
+        weight: 1
+      - path: Chibi_LLegPlatform
+        weight: 1
+      - path: Chibi_Pelvis
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_LLegThigh
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_LLegThigh/Chibi_LLegCalf
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_RThigh
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_RThigh/Chibi_RCalf
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm/Chibi_LArmForearm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_LArmCollarbone/Chibi_LArmUpperarm/Chibi_LArmForearm/Chibi_LArmPalm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_Neck
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_Neck/Chibi_Head001
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm/Chibi_RForearm
+        weight: 1
+      - path: Chibi_Pelvis/Chibi_Spine1/Chibi_Spine2/Chibi_Spine3/Chibi_Spine4/Chibi_Ribcage/Chibi_RCollarbone/Chibi_RUpperarm/Chibi_RForearm/Chibi_RPalm
+        weight: 1
+      - path: Chibi_RPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []

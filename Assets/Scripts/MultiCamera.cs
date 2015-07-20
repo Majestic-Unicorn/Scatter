@@ -45,8 +45,6 @@ public class MultiCamera : MonoBehaviour {
         Vector3 min = new Vector3(0, 0, 0);
         Vector3 max = new Vector3(0, 0, 0);
 
-       // Vector3 average = new Vector3(0, 0, 0);
-
         for (int i = 0; i < targets.Length; i++){
             if (targets[i].position.x < min.x)
                 min.x = targets[i].position.x;
@@ -62,8 +60,6 @@ public class MultiCamera : MonoBehaviour {
                 min.z = targets[i].position.z;
             else if (targets[i].position.z > max.z)
                 max.z = targets[i].position.z;
-            
-            //average += targets[i].position;
         }
 
         Vector3 centre = (max + min) / 2;
