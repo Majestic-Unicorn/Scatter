@@ -6,11 +6,16 @@ public class Gem : MonoBehaviour {
 
     private bool _pickedUp = false;
 
+    void Update() {
+        if (!_pickedUp)
+            transform.Rotate(new Vector3(0, 0, 100 * Time.deltaTime));
+    }
+
     void OnTriggerEnter(Collider other) {
         if (other.tag == searchTag && !_pickedUp){
             PlayerController player = other.GetComponent<PlayerController>();
 
-            if (player && player.able())
+            if (player && player.Able())
                 player.gemGet(transform);
             else
                 return;

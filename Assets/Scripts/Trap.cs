@@ -28,6 +28,8 @@ public class Trap : MonoBehaviour {
 
     private Animator animator;
 
+    private float primeTime = 0.5f;
+
     void Start(){
         animator = GetComponent<Animator>();
 
@@ -35,6 +37,11 @@ public class Trap : MonoBehaviour {
     }
 
     void Update(){
+        primeTime -= Time.deltaTime;
+
+        if (primeTime < 0)
+            primeTime = 0;
+
         foreach (Pair<Transform, float> pair in set){
             pair.Second -= Time.deltaTime;
 
@@ -43,7 +50,7 @@ public class Trap : MonoBehaviour {
 
                 PlayerController player = pair.First.GetComponent<PlayerController>();
 
-                if (player && recurring){
+                if (player && recurring && primeTime == 0){
                     player.Fall();
                     animator.Play("Fire");
                 }
@@ -57,7 +64,7 @@ public class Trap : MonoBehaviour {
 
             PlayerController player = other.GetComponent<PlayerController>();
 
-            if (player){
+            if (player && primeTime == 0){
                 player.Fall();
 
                 player.transform.Rotate(new Vector3(0, 180, 0));
