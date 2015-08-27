@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour {
 
     private float fallCoolDown = 0f;
 
+    private bool gotGem = false;
+
+    private Transform gem;
+
     void Start(){
         rigidBody = GetComponentInChildren<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
@@ -47,10 +51,39 @@ public class PlayerController : MonoBehaviour {
         return false;
     }
 
-    void Fall(){
+    public bool able(){
+        if (fallCoolDown != 0)
+            return false;
+
+        return true;
+    }
+
+    public void gemGet(Transform gem){
+        animator.SetLayerWeight(1, 1);
+        animator.SetLayerWeight(2, 1);
+
+        this.gem = gem;
+
+        gotGem = true;
+    }
+
+    public void Fall(){
         fallCoolDown = 2f;
         animator.SetBool("Fall", true);
         //GetComponent<CapsuleCollider>().enabled = false;
+
+        dropGem();
+    }
+
+    public void dropGem(){
+        if (gotGem){
+            gotGem = false;
+            gem.transform.parent = null;
+
+            gem.GetComponent<Gem>().drop();
+
+            gem = null;
+        }
     }
 
     void GetUp(){
@@ -81,37 +114,40 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetAxis("Fire3") != 0)
                 dBoost = boostSpeed;
 
-            if ((Input.GetAxis("Jump") != 0 && !armsOut) || armsMid){
-                if (!armsMid)
-                {
-                    armsMid = true;
-                    PushOthers();
+            if (!gotGem){
+                if ((Input.GetAxis("Jump") != 0 && !armsOut) || armsMid){
+                    if (!armsMid){
+                        armsMid = true;
+                        PushOthers();
+                    }
+
+                    lArm += ((1f - lArm) * .15f * pushSpeed) * Time.deltaTime;
+                    rArm += ((1f - rArm) * .15f * pushSpeed) * Time.deltaTime;
+
+                    if (lArm > 0.9f && rArm > 0.98f){
+                        armsOut = true;
+                        armsMid = false;
+                    }
                 }
+                else{
+                    lArm += ((0f - lArm) * .05f * pushSpeed) * Time.deltaTime;
+                    rArm += ((0f - rArm) * .05f * pushSpeed) * Time.deltaTime;
 
-                lArm += ((1f - lArm) * .15f * pushSpeed) * Time.deltaTime;
-                rArm += ((1f - rArm) * .15f * pushSpeed) * Time.deltaTime;
-
-                if (lArm > 0.9f && rArm > 0.98f){
-                    armsOut = true;
-                    armsMid = false;
+                    if (lArm < 0.1f && rArm < 0.005f)
+                        armsOut = false;
+                    else
+                        armsOut = true;
                 }
-            }
-            else{
-                lArm += ((0f - lArm) * .05f * pushSpeed) * Time.deltaTime;
-                rArm += ((0f - rArm) * .05f * pushSpeed) * Time.deltaTime;
-
-                if (lArm < 0.1f && rArm < 0.005f)
-                    armsOut = false;
-                else
-                    armsOut = true;
             }
         }
 
         //if (player == 2 && fallCoolDown == 0f)
         //    input.Set(0f, 0f, -.9f);
 
-        animator.SetLayerWeight(1, lArm);
-        animator.SetLayerWeight(2, rArm);
+        if (!gotGem){
+            animator.SetLayerWeight(1, lArm);
+            animator.SetLayerWeight(2, rArm);
+        }
 
         animator.SetFloat("Speed", input.magnitude);
 
