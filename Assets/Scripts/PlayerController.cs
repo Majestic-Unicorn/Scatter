@@ -109,13 +109,16 @@ public class PlayerController : MonoBehaviour {
         // The whole "player == 1" thing will be replaced with multi-controller support eventually
 
         if (player == 1 && fallCoolDown == 0f){
-            input.Set(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            input.Set(Input.GetAxis(string.Concat("Horizontal_", player)), 0, Input.GetAxis(string.Concat("Vertical_", player)));
 
-            if (Input.GetAxis("Fire3") != 0)
+            if (Input.GetAxis(string.Concat("Fire3_", player)) != 0)
                 dBoost = boostSpeed;
 
+            //if (Input.GetAxis(string.Concat("Fire2_", player)) != 0)
+                //dBoost = boostSpeed;
+
             if (!gotGem){
-                if ((Input.GetAxis("Jump") != 0 && !armsOut) || armsMid){
+                if ((Input.GetAxis(string.Concat("Jump_", player)) != 0 && !armsOut) || armsMid){
                     if (!armsMid){
                         armsMid = true;
                         PushOthers();
@@ -144,9 +147,13 @@ public class PlayerController : MonoBehaviour {
         //if (player == 2 && fallCoolDown == 0f)
         //    input.Set(0f, 0f, -.9f);
 
-        if (!gotGem){
+        if (!gotGem && fallCoolDown == 0){
             animator.SetLayerWeight(1, lArm);
             animator.SetLayerWeight(2, rArm);
+        }
+        else if (fallCoolDown != 0){
+            animator.SetLayerWeight(1, 0);
+            animator.SetLayerWeight(2, 0);
         }
 
         animator.SetFloat("Speed", input.magnitude);
