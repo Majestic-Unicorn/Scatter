@@ -1,5 +1,8 @@
+# Scatter
+<img src="http://i.imgur.com/dlXGtjT.png"/>
+
 # Controls
-Gamepad is required as keyboard is no longer supported.  
+Gamepads are required as keyboard is no longer supported.  
   
 **Xbox 360 Controls:**  
 Left Joystick = Movement  
@@ -8,7 +11,8 @@ B = Lay Trap
 RB = Sprint  
 
 # Requirements
-Download UnityVS for your version of Visual Studio to open the solution - http://unityvs.com/  
+Download UnityVS for your version of Visual Studio to open the solution:  
+https://www.visualstudio.com/features/unitytools-vs  
 
 # To do
 - ~~Fix movement~~
