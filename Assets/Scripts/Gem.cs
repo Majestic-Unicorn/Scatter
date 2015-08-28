@@ -4,15 +4,21 @@ using System.Collections;
 public class Gem : MonoBehaviour {
     private string searchTag = "Player";
 
-    private bool _pickedUp = false;
+    private bool pickedUp = false;
+
+    private AudioSource audio;
+
+    void Start(){
+        audio = GetComponent<AudioSource>();
+    }
 
     void Update() {
-        if (!_pickedUp)
+        if (!pickedUp)
             transform.Rotate(new Vector3(0, 0, 100 * Time.deltaTime));
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.tag == searchTag && !_pickedUp){
+        if (other.tag == searchTag && !pickedUp){
             PlayerController player = other.GetComponent<PlayerController>();
 
             if (player && player.Able())
@@ -20,7 +26,9 @@ public class Gem : MonoBehaviour {
             else
                 return;
 
-            _pickedUp = true;
+            pickedUp = true;
+
+            audio.Play();
 
             transform.parent = other.transform.FindChild("char").transform.FindChild("Chibi_Pelvis").transform.FindChild("Chibi_Spine1").transform.FindChild("Chibi_Spine2").transform.FindChild("Chibi_Spine3").transform.FindChild("Chibi_Spine4").transform.FindChild("Chibi_Ribcage").transform;
 
@@ -34,6 +42,6 @@ public class Gem : MonoBehaviour {
     }
 
     public void drop(){
-        _pickedUp = false;
+        pickedUp = false;
     }
 }

@@ -30,10 +30,16 @@ public class Trap : MonoBehaviour {
 
     private float primeTime = 0.5f;
 
+    private AudioSource audioPrime;
+    private AudioSource audioTrigger;
+
     void Start(){
         animator = GetComponent<Animator>();
+        
+        audioPrime = GetComponents<AudioSource>()[0];
+        audioTrigger = GetComponents<AudioSource>()[1];
 
-        //animator.Play("Prime");
+        audioPrime.Play();
     }
 
     void Update(){
@@ -53,6 +59,8 @@ public class Trap : MonoBehaviour {
                 if (player && recurring && primeTime == 0){
                     player.Fall();
                     animator.Play("Fire");
+
+                    audioTrigger.Play();
                 }
             }
         }
@@ -69,6 +77,10 @@ public class Trap : MonoBehaviour {
 
                 player.transform.Rotate(new Vector3(0, 180, 0));
                 animator.Play("Fire");
+
+                audioTrigger.Play();
+
+                Destroy(transform.gameObject, 1);
             }
         }
     }

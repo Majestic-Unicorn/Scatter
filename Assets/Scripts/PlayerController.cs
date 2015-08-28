@@ -32,15 +32,25 @@ public class PlayerController : MonoBehaviour {
 
     bool layedTrap = false;
 
+    private AudioSource audioTaunt;
+    private AudioSource audioHurt;
+    private AudioSource audioGem;
+
     void Start(){
         rigidBody = GetComponentInChildren<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         touchSet = GetComponentInChildren<TouchSet>();
 
+        audioTaunt = GetComponents<AudioSource>()[0];
+        audioHurt = GetComponents<AudioSource>()[1];
+        audioGem = GetComponents<AudioSource>()[2];
+
         boostCoolDown = boostTime;
     }
 
     void PushOthers(){
+        bool pushed = false;
+
         foreach (Transform other in touchSet.set){
             PlayerController controller = other.GetComponent<PlayerController>();
 
@@ -48,8 +58,12 @@ public class PlayerController : MonoBehaviour {
                 other.GetComponentInChildren<Animator>().SetBool("Fall", true);
                 controller.Fall();
                 other.transform.LookAt(transform);
+                pushed = true;
             }
         }
+
+        if (pushed)
+            audioTaunt.Play();
     }
 
     bool Fallen(){
@@ -77,6 +91,8 @@ public class PlayerController : MonoBehaviour {
 
         this.gem = gem;
 
+        audioGem.PlayDelayed(0.1f);
+
         gotGem = true;
     }
 
@@ -84,6 +100,8 @@ public class PlayerController : MonoBehaviour {
         fallCoolDown = 2f;
         animator.SetBool("Fall", true);
         //GetComponent<CapsuleCollider>().enabled = false;
+
+        audioHurt.PlayDelayed(0.2f);
 
         dropGem();
     }

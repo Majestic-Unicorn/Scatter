@@ -19,6 +19,8 @@ public class MultiCamera : MonoBehaviour {
 
     public float zOffset = 5f;
 
+    public float minHeight = 100;
+
     void Start() {
         Vector3 average = CentreTarget();
 
@@ -104,6 +106,9 @@ public class MultiCamera : MonoBehaviour {
 
         if (zoomIn)
             height -= zoomSpeed;
+
+        if (height < minHeight)
+            height = minHeight;
 
         Vector3 average = CentreTarget();
 
