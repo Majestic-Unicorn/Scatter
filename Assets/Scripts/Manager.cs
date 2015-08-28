@@ -24,7 +24,7 @@ public class Manager : MonoBehaviour {
 
     private bool easing = false;
 
-    private GameObject camera;
+    private GameObject pCamera;
 
     private bool escPressed = false;
 
@@ -44,7 +44,7 @@ public class Manager : MonoBehaviour {
         pauseCanvas.SetActive(false);
         endCanvas.SetActive(false);
 
-        camera = GameObject.FindGameObjectWithTag("MainCamera");
+        pCamera = GameObject.FindGameObjectWithTag("MainCamera");
 	}
 	
 	// Update is called once per frame
@@ -93,9 +93,9 @@ public class Manager : MonoBehaviour {
         if (easing){
             Vector3 target = gem.transform.position - new Vector3(0, -50, 50);
 
-            camera.transform.position = Vector3.Lerp(camera.transform.position, target, 0.1f);
+            pCamera.transform.position = Vector3.Lerp(pCamera.transform.position, target, 0.1f);
 
-            camera.transform.LookAt(gem.transform.position);
+            pCamera.transform.LookAt(gem.transform.position);
         }
     }
 
@@ -104,7 +104,7 @@ public class Manager : MonoBehaviour {
             player.Freeze();
         }
 
-        camera.GetComponent<MultiCamera>().enabled = false;
+        pCamera.GetComponent<MultiCamera>().enabled = false;
 
         easing = true;
 
@@ -123,7 +123,7 @@ public class Manager : MonoBehaviour {
 
         gem.transform.parent = null;
 
-        camera.GetComponent<MultiCamera>().enabled = true;
+        pCamera.GetComponent<MultiCamera>().enabled = true;
 
         endCanvas.SetActive(false);
         pauseCanvas.SetActive(false);
@@ -151,7 +151,7 @@ public class Manager : MonoBehaviour {
 
         playCanvas.SetActive(true);
 
-        countDown = 10;
+        countDown = 60;
     }
 
     public void ExitGame(){
