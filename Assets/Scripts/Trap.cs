@@ -28,7 +28,7 @@ public class Trap : MonoBehaviour {
 
     private Animator animator;
 
-    private float primeTime = 0.5f;
+    private float primeTime = 0.05f;
 
     private AudioSource audioPrime;
     private AudioSource audioTrigger;
@@ -42,6 +42,8 @@ public class Trap : MonoBehaviour {
         audioTrigger = GetComponents<AudioSource>()[1];
 
         audioPrime.Play();
+
+        Destroy(transform.gameObject, 30);
     }
 
     void Update(){

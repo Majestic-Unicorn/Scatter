@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
 
     bool layedTrap = false;
 
-    public int traps = 3;
+    public int traps = 999999;
 
     private AudioSource audioTaunt;
     private AudioSource audioHurt;
@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour {
 
         // The whole "player == 1" thing will be replaced with multi-controller support eventually
 
-        if (player == 1 && fallCoolDown == 0f){
+        if ((player == 1 || player == 2 || player == 3)&& fallCoolDown == 0f){
             input.Set(Input.GetAxis(string.Concat("Horizontal_", player)), 0, Input.GetAxis(string.Concat("Vertical_", player)));
 
             if (Input.GetAxis(string.Concat("Boost_", player)) != 0 && boostCoolDown > 0){
@@ -179,8 +179,8 @@ public class PlayerController : MonoBehaviour {
 
             if (Input.GetAxis(string.Concat("Trap_", player)) != 0 && !layedTrap && trapCoolDown == 0 && traps != 0){
                 LayTrap();
-                trapCoolDown = 1;
-                traps -= 1;
+                trapCoolDown = 5;
+                //traps -= 1;
             }
             else if (Input.GetAxis(string.Concat("Trap_", player)) == 0 && layedTrap)   {
                 layedTrap = false;

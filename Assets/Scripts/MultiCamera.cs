@@ -120,4 +120,6 @@ public class MultiCamera : MonoBehaviour {
 
         transform.LookAt(average);
 	}
+
+    public void Retarget(Transform transform)
 }
