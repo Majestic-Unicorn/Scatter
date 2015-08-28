@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour {
     private AudioSource audioHurt;
     private AudioSource audioGem;
 
-    private Collider collider;
+    private Collider pCollider;
 
     void Start(){
         rigidBody = GetComponentInChildren<Rigidbody>();
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour {
         audioHurt.volume = 0.3f;
         audioGem.volume = 0.3f;
 
-        collider = GetComponent<Collider>();
+        pCollider = GetComponent<Collider>();
 
         boostCoolDown = boostTime;
     }
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour {
 
         dropGem();
 
-        collider.enabled = false;
+        pCollider.enabled = false;
     }
 
     public void dropGem(){
@@ -146,7 +146,7 @@ public class PlayerController : MonoBehaviour {
             if (fallCoolDown < 0f || fallCoolDown == 0f){
                 GetUp();
 
-                collider.enabled = true;
+                pCollider.enabled = true;
             }
         }
 

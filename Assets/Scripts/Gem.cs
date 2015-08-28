@@ -6,10 +6,10 @@ public class Gem : MonoBehaviour {
 
     private bool pickedUp = false;
 
-    private AudioSource audio;
+    private AudioSource pAudio;
 
     void Start(){
-        audio = GetComponent<AudioSource>();
+        pAudio = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -28,7 +28,7 @@ public class Gem : MonoBehaviour {
 
             pickedUp = true;
 
-            audio.Play();
+            pAudio.Play();
 
             transform.parent = other.transform.FindChild("char").transform.FindChild("Chibi_Pelvis").transform.FindChild("Chibi_Spine1").transform.FindChild("Chibi_Spine2").transform.FindChild("Chibi_Spine3").transform.FindChild("Chibi_Spine4").transform.FindChild("Chibi_Ribcage").transform;
 
