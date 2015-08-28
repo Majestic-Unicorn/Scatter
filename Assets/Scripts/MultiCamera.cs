@@ -9,7 +9,7 @@ public class MultiCamera : MonoBehaviour {
     public float relativeYaw = 0;
     public float relativePitch = 25;
 
-    private float height = 100;
+    public float height = 100;
 
     public float zoomInZone = 1f;
     public float zoomOutZone = 1f;

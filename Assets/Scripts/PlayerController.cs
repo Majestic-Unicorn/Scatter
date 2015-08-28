@@ -30,7 +30,11 @@ public class PlayerController : MonoBehaviour {
 
     private float boostCoolDown;
 
+    private float trapCoolDown = 0;
+
     bool layedTrap = false;
+
+    public int traps = 3;
 
     private AudioSource audioTaunt;
     private AudioSource audioHurt;
@@ -46,6 +50,10 @@ public class PlayerController : MonoBehaviour {
         audioTaunt = GetComponents<AudioSource>()[0];
         audioHurt = GetComponents<AudioSource>()[1];
         audioGem = GetComponents<AudioSource>()[2];
+
+        audioTaunt.volume = 0.3f;
+        audioHurt.volume = 0.3f;
+        audioGem.volume = 0.3f;
 
         collider = GetComponent<Collider>();
 
@@ -142,6 +150,11 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
+        trapCoolDown -= Time.deltaTime;
+
+        if (trapCoolDown < 0)
+            trapCoolDown = 0;
+
         Vector3 input = new Vector3(0, 0, 0);
         float dBoost = 0f;
 
@@ -164,8 +177,10 @@ public class PlayerController : MonoBehaviour {
                     boostCoolDown = 5;
             }
 
-            if (Input.GetAxis(string.Concat("Fire2_", player)) != 0 && !layedTrap){
+            if (Input.GetAxis(string.Concat("Fire2_", player)) != 0 && !layedTrap && trapCoolDown == 0 && traps != 0){
                 LayTrap();
+                trapCoolDown = 1;
+                traps -= 1;
             }
             else if (Input.GetAxis(string.Concat("Fire2_", player)) == 0 && layedTrap)   {
                 layedTrap = false;

@@ -33,6 +33,8 @@ public class Trap : MonoBehaviour {
     private AudioSource audioPrime;
     private AudioSource audioTrigger;
 
+    private bool triggered = false;
+
     void Start(){
         animator = GetComponent<Animator>();
         
@@ -67,7 +69,7 @@ public class Trap : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other){
-        if (other.tag == searchTag){
+        if (other.tag == searchTag && !triggered){
             set.Add(new Pair<Transform, float>(other.transform, coolDown));
 
             PlayerController player = other.GetComponent<PlayerController>();
@@ -79,6 +81,8 @@ public class Trap : MonoBehaviour {
                 animator.Play("Fire");
 
                 audioTrigger.Play();
+
+                triggered = true;
 
                 Destroy(transform.gameObject, 1);
             }
