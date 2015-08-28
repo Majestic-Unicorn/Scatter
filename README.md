@@ -19,7 +19,7 @@ https://www.visualstudio.com/features/unitytools-vs
 - ~~Multi controller input~~
 - ~~Implement audio~~
 - Implement map
-- User interface
+- ~~User interface~~
 - ~~Pickups and traps~~
 - Win lose state
 - ~~Fix collision~~
