@@ -40,7 +40,12 @@ public class PlayerController : MonoBehaviour {
     private AudioSource audioHurt;
     private AudioSource audioGem;
 
+    private bool frozen = false;
+
     private Collider pCollider;
+
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
 
     void Start(){
         rigidBody = GetComponentInChildren<Rigidbody>();
@@ -58,6 +63,9 @@ public class PlayerController : MonoBehaviour {
         pCollider = GetComponent<Collider>();
 
         boostCoolDown = boostTime;
+
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
     }
 
     void PushOthers(){
@@ -88,6 +96,18 @@ public class PlayerController : MonoBehaviour {
     void LayTrap(){
         layedTrap = true;
         Instantiate(Resources.Load("Trap"), transform.position, transform.rotation);
+    }
+
+    public bool HasTrap(){
+        return gotGem;
+    }
+
+    public void Freeze(){
+        frozen = true;
+    }
+
+    public void Unfreeze(){
+        frozen = false;
     }
 
     public bool Able(){
@@ -131,6 +151,19 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    public void Reset()  {
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
+
+        fallCoolDown = 0;
+        gotGem = false;
+        trapCoolDown = 0;
+
+        boostTime = 5f;
+
+        layedTrap = false;
+    }
+
     void GetUp(){
         fallCoolDown = 0f;
         //GetComponent<CapsuleCollider>().enabled = true;
@@ -163,7 +196,7 @@ public class PlayerController : MonoBehaviour {
 
         // The whole "player == 1" thing will be replaced with multi-controller support eventually
 
-        if ((player == 1 || player == 2 || player == 3)&& fallCoolDown == 0f){
+        if (fallCoolDown == 0f && !frozen){
             input.Set(Input.GetAxis(string.Concat("Horizontal_", player)), 0, Input.GetAxis(string.Concat("Vertical_", player)));
 
             if (Input.GetAxis(string.Concat("Boost_", player)) != 0 && boostCoolDown > 0){

@@ -18,8 +18,8 @@ https://www.visualstudio.com/features/unitytools-vs
 - ~~Fix movement~~
 - ~~Multi controller input~~
 - ~~Implement audio~~
-- Implement map
+- ~~Implement map~~
 - ~~User interface~~
 - ~~Pickups and traps~~
-- Win lose state
+- ~~Win lose state~~
 - ~~Fix collision~~

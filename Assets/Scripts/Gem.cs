@@ -8,13 +8,27 @@ public class Gem : MonoBehaviour {
 
     private AudioSource pAudio;
 
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
+
     void Start(){
         pAudio = GetComponent<AudioSource>();
+
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
     }
 
     void Update() {
         if (!pickedUp)
             transform.Rotate(new Vector3(0, 0, 100 * Time.deltaTime));
+    }
+
+    public void Reset()
+    {
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
+
+        pickedUp = false;
     }
 
     void OnTriggerEnter(Collider other) {
