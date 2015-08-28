@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     public bool Able(){
-        if (fallCoolDown != 0 || armsOut)
+        if (fallCoolDown != 0)
             return false;
 
         return true;
