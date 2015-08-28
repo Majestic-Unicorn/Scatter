@@ -18,4 +18,4 @@ Download UnityVS for your version of Visual Studio to open the solution - http:/
 - User interface
 - ~~Pickups and traps~~
 - Win lose state
-- Fix collision
+- ~~Fix collision~~

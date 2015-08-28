@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour {
     private AudioSource audioHurt;
     private AudioSource audioGem;
 
+    private Collider collider;
+
     void Start(){
         rigidBody = GetComponentInChildren<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
@@ -44,6 +46,8 @@ public class PlayerController : MonoBehaviour {
         audioTaunt = GetComponents<AudioSource>()[0];
         audioHurt = GetComponents<AudioSource>()[1];
         audioGem = GetComponents<AudioSource>()[2];
+
+        collider = GetComponent<Collider>();
 
         boostCoolDown = boostTime;
     }
@@ -104,6 +108,8 @@ public class PlayerController : MonoBehaviour {
         audioHurt.PlayDelayed(0.2f);
 
         dropGem();
+
+        collider.enabled = false;
     }
 
     public void dropGem(){
@@ -131,6 +137,8 @@ public class PlayerController : MonoBehaviour {
 
             if (fallCoolDown < 0f || fallCoolDown == 0f){
                 GetUp();
+
+                collider.enabled = true;
             }
         }
 
