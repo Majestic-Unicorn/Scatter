@@ -8,7 +8,7 @@ Gamepads are required as keyboard is no longer supported.
 Left Joystick = Movement  
 A = Attack  
 B = Lay Trap  
-RB = Sprint  
+Y = Sprint  
 
 # Requirements
 Download UnityVS for your version of Visual Studio to open the solution:  
