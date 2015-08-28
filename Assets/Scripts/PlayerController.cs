@@ -166,28 +166,28 @@ public class PlayerController : MonoBehaviour {
         if (player == 1 && fallCoolDown == 0f){
             input.Set(Input.GetAxis(string.Concat("Horizontal_", player)), 0, Input.GetAxis(string.Concat("Vertical_", player)));
 
-            if (Input.GetAxis(string.Concat("Fire3_", player)) != 0 && boostCoolDown > 0){
+            if (Input.GetAxis(string.Concat("Boost_", player)) != 0 && boostCoolDown > 0){
                 dBoost = boostSpeed;
                 boostCoolDown -= Time.deltaTime * 2;
             }
-            else if (Input.GetAxis(string.Concat("Fire3_", player)) == 0){
+            else if (Input.GetAxis(string.Concat("Boost_", player)) == 0){
                 boostCoolDown += Time.deltaTime / 2;
 
                 if (boostCoolDown > 5)
                     boostCoolDown = 5;
             }
 
-            if (Input.GetAxis(string.Concat("Fire2_", player)) != 0 && !layedTrap && trapCoolDown == 0 && traps != 0){
+            if (Input.GetAxis(string.Concat("Trap_", player)) != 0 && !layedTrap && trapCoolDown == 0 && traps != 0){
                 LayTrap();
                 trapCoolDown = 1;
                 traps -= 1;
             }
-            else if (Input.GetAxis(string.Concat("Fire2_", player)) == 0 && layedTrap)   {
+            else if (Input.GetAxis(string.Concat("Trap_", player)) == 0 && layedTrap)   {
                 layedTrap = false;
             }
 
             if (!gotGem){
-                if ((Input.GetAxis(string.Concat("Jump_", player)) != 0 && !armsOut) || armsMid){
+                if ((Input.GetAxis(string.Concat("Push_", player)) != 0 && !armsOut) || armsMid){
                     if (!armsMid){
                         armsMid = true;
                         PushOthers();
